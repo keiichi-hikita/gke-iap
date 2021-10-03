@@ -13,4 +13,6 @@ RUN chmod 755 /gke-iap/run.sh
 RUN cd gke-iap && \
   npm install
 
+EXPOSE 3333
+
 CMD ["/gke-iap/run.sh"]
