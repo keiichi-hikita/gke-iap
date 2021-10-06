@@ -1,4 +1,6 @@
 export default {
+  target: 'server',
+  ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'gke-iap',
@@ -37,5 +39,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  serverMiddleware: [
+    '~/server-middleware/headercheck'
+  ]
 }
